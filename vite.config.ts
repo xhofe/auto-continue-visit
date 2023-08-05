@@ -9,9 +9,10 @@ export default defineConfig({
       entry: 'src/main.ts',
       userscript: {
         author: 'Andy Hsu',
-        description: 'Skip middle page to visit link directly.',
+        description: 'Skip the middle page to visit the link directly.',
         icon: 'https://vitejs.dev/logo.svg',
-        namespace: 'npm/skip-middle-page',
+        namespace: 'https://github.com/Xhofe/skip-middle-pages',
+        license: "MIT",
         match: Object.keys(config).map(url => `${url}*`),
       },
     }),
