@@ -16,6 +16,6 @@ export type ClickElement = {
   interval?: number
 }
 
-export type SkipMethod = TakeFromQuery | ClickElement
+export type ContinueMethod = TakeFromQuery | ClickElement
 
-export type Config = Record<string, SkipMethod>
+export type Config = Record<string, ContinueMethod>

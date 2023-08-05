@@ -1,5 +1,5 @@
 import { config } from './config'
-import { skip } from './skip'
+import { continueVisit } from './continue'
 import { Config } from './types'
 
 function main() {
@@ -10,11 +10,11 @@ function main() {
     _config[origin] = config[url]
   })
   const cfg = _config[origin]
-  console.log(`[skip-middle-page] ${origin} ${cfg}`)
+  console.log(`[auto-continue-visit] ${origin} ${cfg}`)
   if (!cfg) {
     return
   }
-  skip(cfg)
+  continueVisit(cfg)
 }
 
 main()

@@ -1,4 +1,4 @@
-import { ClickElement, SkipMethod, TakeFromQuery } from './types'
+import { ClickElement, ContinueMethod, TakeFromQuery } from './types'
 import { sleep } from './utils'
 
 export function takeFromQuery(cfg: TakeFromQuery) {
@@ -11,7 +11,7 @@ export function takeFromQuery(cfg: TakeFromQuery) {
   if (handler) {
     target = handler(target)
   }
-  console.log(`[skip-middle-page] ${target}`)
+  console.log(`[auto-continue-visit] ${target}`)
   window.open(target, '_self')
 }
 
@@ -30,7 +30,7 @@ export async function clickElement(cfg: ClickElement) {
   }
 }
 
-export async function skip(cfg: SkipMethod) {
+export async function continueVisit(cfg: ContinueMethod) {
   if ('key' in cfg) {
     takeFromQuery(cfg)
   } else {
