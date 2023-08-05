@@ -12,8 +12,10 @@ export default defineConfig({
         description: 'Skip the middle page to visit the link directly.',
         icon: 'https://cdn.jsdelivr.net/gh/Xhofe/skip-middle-pages/assets/logo.svg',
         namespace: 'https://github.com/Xhofe/skip-middle-pages',
-        license: "MIT",
-        match: Object.keys(config).map(url => `${url}*`),
+        license: 'MIT',
+        match: Object.keys(config)
+          .map(url => `${url}*`)
+          .concat(Object.keys(config).map(url => `${url}/*`)),
       },
     }),
   ],
