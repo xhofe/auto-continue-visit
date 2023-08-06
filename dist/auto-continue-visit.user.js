@@ -23,26 +23,32 @@
 (function () {
   'use strict';
 
-  const config = {
-    "https://link.zhihu.com": {
+  const config = [
+    {
+      link: "https://link.zhihu.com",
       key: "target"
     },
-    "https://leetcode.cn/link": {
+    {
+      link: "https://leetcode.cn/link",
       key: "target"
     },
-    "https://link.csdn.net": {
+    {
+      link: "https://link.csdn.net",
       key: "target"
     },
-    "https://link.juejin.cn": {
+    {
+      link: "https://link.juejin.cn",
       key: "target"
     },
-    "https://gitee.com/link": {
+    {
+      link: "https://gitee.com/link",
       key: "target"
     },
-    "https://docs.qq.com/scenario/link.html": {
+    {
+      link: "https://docs.qq.com/scenario/link.html",
       key: "url"
     }
-  };
+  ];
   async function sleep(ms) {
     return new Promise((resolve) => {
       setTimeout(resolve, ms);
@@ -84,12 +90,7 @@
   }
   function main() {
     const origin = window.location.origin;
-    const _config = {};
-    Object.keys(config).forEach((url) => {
-      const origin2 = new URL(url).origin;
-      _config[origin2] = config[url];
-    });
-    const cfg = _config[origin];
+    const cfg = config.find((cfg2) => cfg2.link.startsWith(origin));
     console.log(`[auto-continue-visit] ${origin} ${cfg}`);
     if (!cfg) {
       return;
