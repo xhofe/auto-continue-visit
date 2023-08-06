@@ -13,9 +13,7 @@ export default defineConfig({
         icon: 'https://cdn.jsdelivr.net/gh/Xhofe/auto-continue-visit/assets/logo.svg',
         namespace: 'https://github.com/Xhofe/auto-continue-visit',
         license: 'MIT',
-        match: Object.keys(config)
-          .map(url => `${url}*`)
-          .concat(Object.keys(config).map(url => `${url}/*`)),
+        match: config.map(cfg => `${cfg.link}*`).concat(config.map(cfg => `${cfg.link}/*`)),
       },
     }),
   ],

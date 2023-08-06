@@ -1,6 +1,6 @@
 # auto-continue-visit
 
-![](./assets/logo.svg)
+[![](https://cdn.jsdelivr.net/gh/Xhofe/auto-continue-visit/assets/logo.svg)](https://github.com/Xhofe/auto-continue-visit)
 
 A Tampermonkey script that help you to automatically continue to visit.
 
@@ -13,7 +13,8 @@ Click [here](https://greasyfork.org/zh-CN/scripts/472496) to install.
 ### Add a new site
 
 Edit `src/config.ts` to add a new site.
-The key of the record is the link of the site, and the value is continue method.
+For every site, just add a record to the `config` array.
+The `link` is just the link of the site, and the other field is for continue method.
 
 There are two continue methods now:
 

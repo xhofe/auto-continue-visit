@@ -1,3 +1,8 @@
+export type BasicInfo = {
+  // the link of the site
+  link: string
+}
+
 export type TakeFromQuery = {
   // the key of query
   key: string
@@ -16,6 +21,6 @@ export type ClickElement = {
   interval?: number
 }
 
-export type ContinueMethod = TakeFromQuery | ClickElement
+export type ContinueConfig = BasicInfo & (TakeFromQuery | ClickElement)
 
-export type Config = Record<string, ContinueMethod>
+export type Config = Array<ContinueConfig>

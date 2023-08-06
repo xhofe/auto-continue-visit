@@ -1,4 +1,4 @@
-import { ClickElement, ContinueMethod, TakeFromQuery } from './types'
+import { ClickElement, ContinueConfig, TakeFromQuery } from './types'
 import { sleep } from './utils'
 
 export function takeFromQuery(cfg: TakeFromQuery) {
@@ -30,7 +30,7 @@ export async function clickElement(cfg: ClickElement) {
   }
 }
 
-export async function continueVisit(cfg: ContinueMethod) {
+export async function continueVisit(cfg: ContinueConfig) {
   if ('key' in cfg) {
     takeFromQuery(cfg)
   } else {
