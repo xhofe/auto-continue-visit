@@ -25,4 +25,8 @@ export const config: Config = [
     link: 'https://docs.qq.com/scenario/link.html',
     key: 'url',
   },
+  {
+    link: 'https://hd.nowcoder.com/link.html',
+    key: 'target',
+  },
 ]
