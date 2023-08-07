@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         auto-continue-visit
 // @namespace    https://github.com/Xhofe/auto-continue-visit
-// @version      0.0.0
+// @version      0.0.1
 // @author       Andy Hsu
 // @description  A Tampermonkey script that help you to automatically continue to visit.
 // @license      MIT
@@ -12,12 +12,14 @@
 // @match        https://link.juejin.cn*
 // @match        https://gitee.com/link*
 // @match        https://docs.qq.com/scenario/link.html*
+// @match        https://hd.nowcoder.com/link.html*
 // @match        https://link.zhihu.com/*
 // @match        https://leetcode.cn/link/*
 // @match        https://link.csdn.net/*
 // @match        https://link.juejin.cn/*
 // @match        https://gitee.com/link/*
 // @match        https://docs.qq.com/scenario/link.html/*
+// @match        https://hd.nowcoder.com/link.html/*
 // ==/UserScript==
 
 (function () {
@@ -47,6 +49,10 @@
     {
       link: "https://docs.qq.com/scenario/link.html",
       key: "url"
+    },
+    {
+      link: "https://hd.nowcoder.com/link.html",
+      key: "target"
     }
   ];
   async function sleep(ms) {
