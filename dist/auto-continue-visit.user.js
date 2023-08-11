@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         auto-continue-visit
 // @namespace    https://github.com/Xhofe/auto-continue-visit
-// @version      0.0.1
+// @version      0.0.2
 // @author       Andy Hsu
 // @description  A Tampermonkey script that help you to automatically continue to visit.
 // @license      MIT
@@ -14,6 +14,7 @@
 // @match        https://docs.qq.com/scenario/link.html*
 // @match        https://hd.nowcoder.com/link.html*
 // @match        https://www.oschina.net/action/GoToLink*
+// @match        https://cloud.tencent.com/developer/tools/blog-entry*
 // @match        https://link.zhihu.com/*
 // @match        https://leetcode.cn/link/*
 // @match        https://link.csdn.net/*
@@ -22,6 +23,7 @@
 // @match        https://docs.qq.com/scenario/link.html/*
 // @match        https://hd.nowcoder.com/link.html/*
 // @match        https://www.oschina.net/action/GoToLink/*
+// @match        https://cloud.tencent.com/developer/tools/blog-entry/*
 // ==/UserScript==
 
 (function () {
@@ -59,6 +61,10 @@
     {
       link: "https://www.oschina.net/action/GoToLink",
       key: "url"
+    },
+    {
+      link: "https://cloud.tencent.com/developer/tools/blog-entry",
+      key: "target"
     }
   ];
   async function sleep(ms) {
