@@ -13,6 +13,7 @@
 // @match        https://gitee.com/link*
 // @match        https://docs.qq.com/scenario/link.html*
 // @match        https://hd.nowcoder.com/link.html*
+// @match        https://www.oschina.net/action/GoToLink*
 // @match        https://link.zhihu.com/*
 // @match        https://leetcode.cn/link/*
 // @match        https://link.csdn.net/*
@@ -20,6 +21,7 @@
 // @match        https://gitee.com/link/*
 // @match        https://docs.qq.com/scenario/link.html/*
 // @match        https://hd.nowcoder.com/link.html/*
+// @match        https://www.oschina.net/action/GoToLink/*
 // ==/UserScript==
 
 (function () {
@@ -53,6 +55,10 @@
     {
       link: "https://hd.nowcoder.com/link.html",
       key: "target"
+    },
+    {
+      link: "https://www.oschina.net/action/GoToLink",
+      key: "url"
     }
   ];
   async function sleep(ms) {
