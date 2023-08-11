@@ -29,4 +29,8 @@ export const config: Config = [
     link: 'https://hd.nowcoder.com/link.html',
     key: 'target',
   },
+  {
+    link: 'https://www.oschina.net/action/GoToLink',
+    key: 'url',
+  },
 ]
