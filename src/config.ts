@@ -33,4 +33,8 @@ export const config: Config = [
     link: 'https://www.oschina.net/action/GoToLink',
     key: 'url',
   },
+  {
+    link: 'https://cloud.tencent.com/developer/tools/blog-entry',
+    key: 'target',
+  },
 ]
