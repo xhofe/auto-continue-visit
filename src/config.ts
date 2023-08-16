@@ -37,4 +37,8 @@ export const config: Config = [
     link: 'https://cloud.tencent.com/developer/tools/blog-entry',
     key: 'target',
   },
+  {
+    link: 'https://c.pc.qq.com/middlem.html',
+    key: 'pfurl',
+  },
 ]
