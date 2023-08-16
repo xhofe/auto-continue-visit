@@ -15,6 +15,7 @@
 // @match        https://hd.nowcoder.com/link.html*
 // @match        https://www.oschina.net/action/GoToLink*
 // @match        https://cloud.tencent.com/developer/tools/blog-entry*
+// @match        https://c.pc.qq.com/middlem.html*
 // @match        https://link.zhihu.com/*
 // @match        https://leetcode.cn/link/*
 // @match        https://link.csdn.net/*
@@ -24,6 +25,7 @@
 // @match        https://hd.nowcoder.com/link.html/*
 // @match        https://www.oschina.net/action/GoToLink/*
 // @match        https://cloud.tencent.com/developer/tools/blog-entry/*
+// @match        https://c.pc.qq.com/middlem.html/*
 // ==/UserScript==
 
 (function () {
@@ -65,6 +67,10 @@
     {
       link: "https://cloud.tencent.com/developer/tools/blog-entry",
       key: "target"
+    },
+    {
+      link: "https://c.pc.qq.com/middlem.html",
+      key: "pfurl"
     }
   ];
   async function sleep(ms) {
