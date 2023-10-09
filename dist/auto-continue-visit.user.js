@@ -16,6 +16,7 @@
 // @match        https://www.oschina.net/action/GoToLink*
 // @match        https://cloud.tencent.com/developer/tools/blog-entry*
 // @match        https://c.pc.qq.com/middlem.html*
+// @match        https://www.kdocs.cn/office/link*
 // @match        https://link.zhihu.com/*
 // @match        https://leetcode.cn/link/*
 // @match        https://link.csdn.net/*
@@ -26,6 +27,7 @@
 // @match        https://www.oschina.net/action/GoToLink/*
 // @match        https://cloud.tencent.com/developer/tools/blog-entry/*
 // @match        https://c.pc.qq.com/middlem.html/*
+// @match        https://www.kdocs.cn/office/link/*
 // ==/UserScript==
 
 (function () {
@@ -71,6 +73,10 @@
     {
       link: "https://c.pc.qq.com/middlem.html",
       key: "pfurl"
+    },
+    {
+      link: "https://www.kdocs.cn/office/link",
+      key: "target"
     }
   ];
   async function sleep(ms) {
