@@ -41,4 +41,8 @@ export const config: Config = [
     link: 'https://c.pc.qq.com/middlem.html',
     key: 'pfurl',
   },
+  {
+    link: 'https://www.kdocs.cn/office/link',
+    key: 'target',
+  },
 ]
